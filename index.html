@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official portfolio of Rahul D, MCA Graduate, Aspiring Software Developer, and AI/ML Developer. Explore projects including the Hybrid Crowd Analysis Framework and connect on GitHub (rahulkarthick).">
+    <meta name="keywords" content="Rahul D, Rahul D Software Developer, Rahul D MCA, Rahul D GitHub, rahulkarthick, Rahul D Portfolio, AI ML Developer Rahul D, Hybrid Crowd Framework">
+    <meta name="author" content="Rahul D">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rahulkarthick.github.io/">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Rahul D - Software Developer Portfolio">
+    <meta property="og:description" content="MCA Graduate | Aspiring Software Developer | AI/ML Developer. View projects and code on GitHub.">
+    <meta property="og:url" content="https://rahulkarthick.github.io/">
+    <meta property="og:profile:first_name" content="Rahul">
+    <meta property="og:profile:last_name" content="D">
+    <meta property="og:profile:username" content="rahulkarthick">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rahul D - Software Developer Portfolio">
+    <meta name="twitter:description" content="MCA Graduate | Aspiring Software Developer | AI/ML Developer">
+
+    <title>Rahul D - Software Developer Portfolio</title>
+
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data (JSON-LD) for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rahul D",
+      "alternateName": "rahulkarthick",
+      "url": "https://rahulkarthick.github.io/",
+      "image": "https://github.com/rahulkarthick.png",
+      "sameAs": [
+        "https://github.com/rahulkarthick"
+      ],
+      "jobTitle": "Software Developer / AI & ML Developer",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Anna University"
+      },
+      "knowsAbout": [
+        "Software Engineering",
+        "Python",
+        "Machine Learning",
+        "Computer Vision",
+        "YOLOv8",
+        "CSRNet",
+        "PyTorch",
+        "Flask",
+        "Web Development"
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --card-border: #30363d;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            --accent-green: #238636;
+            --accent-green-hover: #2ea043;
+            --accent-blue: #58a6ff;
+            --tag-bg: #21262d;
+            --border-radius: 12px;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 1rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Profile Card Layout */
+        header.profile-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header.profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #238636, #58a6ff, #1f6feb);
+        }
+
+        .avatar-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.25rem;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--card-border);
+            object-fit: cover;
+            background-color: #21262d;
+        }
+
+        .badge-online {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            width: 16px;
+            height: 16px;
+            background-color: #3fb950;
+            border: 3px solid var(--card-bg);
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            word-break: break-word;
+        }
+
+        /* Action Buttons */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background-color: var(--accent-green);
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(46, 160, 67, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: #21262d;
+            color: var(--text-primary);
+            border: 1px solid var(--card-border);
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #30363d;
+            border-color: #8b949e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Section Cards */
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .project-title:hover {
+            text-decoration: underline;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1rem));
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .metric-badge {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        .metric-badge strong {
+            color: #3fb950;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--accent-blue);
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.65rem;
+            border-radius: 20px;
+            border: 1px solid rgba(88, 166, 255, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--card-border);
+            width: 100%;
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            header.profile-card {
+                padding: 1.75rem 1.25rem;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Developer Profile Header -->
+        <header class="profile-card" itemscope itemtype="https://schema.org/Person">
+            <div class="avatar-container">
+                <img src="https://github.com/rahulkarthick.png" alt="Rahul D - GitHub Profile Picture" class="avatar" itemprop="image">
+                <span class="badge-online" title="Available for opportunities"></span>
+            </div>
+            
+            <h1 itemprop="name">Rahul D</h1>
+            
+            <p class="subtitle" itemprop="jobTitle">MCA Graduate | Aspiring Software Developer | AI/ML Developer</p>
+            
+            <div class="btn-group">
+                <!-- Action Button hyperlinking to GitHub profile -->
+                <a href="https://github.com/rahulkarthick" class="btn" target="_blank" rel="me author" itemprop="url">
+                    <i class="fab fa-github"></i> View GitHub Profile (rahulkarthick)
+                </a>
+                <a href="https://github.com/rahulkarthick/rahul-final" class="btn btn-secondary" target="_blank" rel="noopener">
+                    <i class="fas fa-code-branch"></i> Featured Project: rahul-final
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Featured Project Section -->
+        <main>
+            <h2 class="section-title">
+                <i class="fas fa-star" style="color: #e3b341;"></i> Featured Project
+            </h2>
+
+            <article class="project-card" itemscope itemtype="https://schema.org/SoftwareSourceCode">
+                <div class="project-header">
+                    <a href="https://github.com/rahulkarthick/rahul-final" class="project-title" itemprop="codeRepository" target="_blank" rel="noopener">
+                        <i class="fas fa-folder-open"></i> rahulkarthick / rahul-final
+                    </a>
+                    <span class="tag" style="background: rgba(35, 134, 54, 0.2); color: #3fb950; border-color: #238636;">MCA Final Year Thesis</span>
+                </div>
+                
+                <p class="project-desc" itemprop="description">
+                    <strong>Hybrid Crowd Analysis Framework:</strong> An end-to-end 7-module real-time Computer Vision system integrating YOLOv8 person detection, CSRNet dense crowd counting, Lucas-Kanade optical flow motion tracking, and EMA anomaly risk scoring with a Flask streaming dashboard.
+                </p>
+
+                <div class="metrics-grid">
+                    <div class="metric-badge">YOLOv8 mAP: <strong>85.9%</strong></div>
+                    <div class="metric-badge">CSRNet MAE: <strong>10.6</strong></div>
+                    <div class="metric-badge">System Accuracy: <strong>92.3%</strong></div>
+                    <div class="metric-badge">Real-Time Speed: <strong>31 FPS</strong></div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag">PyTorch 2.1</span>
+                    <span class="tag">YOLOv8</span>
+                    <span class="tag">CSRNet VGG-16</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">Lucas-Kanade Flow</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">Apple MPS</span>
+                </div>
+            </article>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 <strong>Rahul D</strong> (rahulkarthick). All rights reserved.</p>
+            <p style="margin-top: 0.4rem;">Hosted on <a href="https://github.com/rahulkarthick" target="_blank" rel="me">GitHub Pages</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
